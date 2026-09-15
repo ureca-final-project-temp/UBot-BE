@@ -2,7 +2,7 @@
 
 통신사 고객 상담용 RAG 챗봇 UBot의 백엔드 서버입니다.
 
-- 스택: Spring Boot 4.1.1 · Java 21 · PostgreSQL 18 + pgvector 0.8.6 · Ollama(BGE-M3)
+- 스택: Spring Boot 4.1.1 · Java 21 · PostgreSQL 18 + pgvector 0.8.6 + PostGIS 3.6.4 · Ollama(BGE-M3)
 - 대상: 이 저장소를 개발하는 팀원
 
 ## Quick start
@@ -49,6 +49,7 @@ Testcontainers가 테스트 전용 PostgreSQL + pgvector 컨테이너를 만들�
 |---|---|
 | 처음 로컬에서 실행하기 | [docs/quickstart.md](docs/quickstart.md) |
 | DB 직접 조회하기 (psql, DBeaver) | [docs/how-to/db-access.md](docs/how-to/db-access.md) |
+| 매장 정보 적재하기 (psql, DBeaver) | [docs/how-to/import-stores.md](docs/how-to/import-stores.md) |
 | 환경변수·프로필 설정값 찾기 | [docs/reference/configuration.md](docs/reference/configuration.md) |
 | 실행이 안 될 때 | [docs/troubleshooting.md](docs/troubleshooting.md) |
 | 브랜치·PR·CI 규칙 | [CONTRIBUTING.md](CONTRIBUTING.md) |
@@ -60,6 +61,6 @@ Testcontainers가 테스트 전용 PostgreSQL + pgvector 컨테이너를 만들�
 | Java | 21 |
 | Spring Boot | 4.1.1 |
 | Spring AI | 2.0.1 |
-| PostgreSQL + pgvector | 18 + 0.8.6 (`pgvector/pgvector:0.8.6-pg18-trixie`) |
+| PostgreSQL + pgvector + PostGIS | 18 + 0.8.6 + 3.6.4 |
 | Ollama | `ollama/ollama:0.34.0` |
 | Embedding 모델 | `bge-m3:567m` (1024차원) |
